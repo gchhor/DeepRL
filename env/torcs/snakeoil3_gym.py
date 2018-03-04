@@ -179,10 +179,10 @@ class Client(object):
                     os.system(u'pkill %s' % self.bin)
                     time.sleep(1.0)
                     if self.vision is False:
-                        command = '%s -p %s -nofuel -nolaptime &' % (self.bin, self.port)
+                        command = '%s -p %s -nofuel -t -nolaptime &' % (self.bin, self.port)
                         os.system(command)
                     else:
-                        command = '%s -p %s -nofuel -nolaptime -vision &' % (self.bin, self.port)
+                        command = '%s -p %s -nofuel -t -nolaptime -vision &' % (self.bin, self.port)
                         os.system(command)
 
                     time.sleep(1.0)
