@@ -61,9 +61,9 @@ class TorcsEnv():
             os.system('pkill %s' % self.bin)
             time.sleep(0.5)
             if self.vision is True:
-                command = '%s -p %s -nofuel -T -nolaptime -vision &' % (self.bin, self.port)
+                command = '%s -T -p %s -nofuel -nolaptime -vision &' % (self.bin, self.port)
             else:
-                command = '%s -p %s -nofuel -T -nolaptime &' % (self.bin, self.port)
+                command = '%s -T -p %s -nofuel -nolaptime &' % (self.bin, self.port)
             os.system(command)
             time.sleep(0.5)
             os.system('sh %s' % self.track_file)
